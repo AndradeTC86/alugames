@@ -4,6 +4,7 @@ function alterarStatus(id){
     const item = document.getElementById(`game-${id}`)
     const imageDiv = item.querySelector('.dashboard__item__img')
     const button = item.querySelector('.dashboard__item__button')
+    const nome = item.querySelector('.dashboard__item__name')
     
     if (button.textContent.trim() === 'Alugar'){
         button.textContent = 'Devolver'
@@ -11,7 +12,7 @@ function alterarStatus(id){
         imageDiv.classList.add('dashboard__item__img--rented')
     }
     else{
-        let text = "Confirma a devolução do jogo alugado"
+        let text = `Confirma a devolução do jogo ${nome} selecionado?`
         if(confirm(text) == true){
             button.textContent = 'Alugar'
             button.classList.remove('dashboard__item__button--return')
