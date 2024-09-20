@@ -12,7 +12,7 @@ function alterarStatus(id){
         imageDiv.classList.add('dashboard__item__img--rented')
     }
     else{
-        let text = `Confirma a devolução do jogo ${nome} selecionado?`
+        let text = `Confirma a devolução do jogo ${nome.textContent} selecionado?`
         if(confirm(text) == true){
             button.textContent = 'Alugar'
             button.classList.remove('dashboard__item__button--return')
